@@ -1,0 +1,56 @@
+h1, h2, h3, h4, h5, h6, a, p {
+  font-family: Raleway, sans-serif;
+}
+
+.section {
+  padding: 35px 0;
+}
+
+.sticky-top {
+  background: #fff;
+}
+
+.highlight {
+  color: $primary_color;
+}
+
+h2 {
+  padding-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-control:focus {
+  outline-style: none;
+  box-shadow: none;
+}
+
+/*Sliders*/
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+  margin-left: 15px;
+  &.active {
+    background-color: transparent;
+  }
+  &.active:before {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    width: 5px;
+    height: 5px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background: #fff;
+  }
+}
+
+ul {
+  list-style: none;
+}

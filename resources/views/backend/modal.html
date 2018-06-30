@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+<button class="btn btn-primary" data-target="#message-modal" data-toggle="modal">Done Modal</button>
+
+<button class="btn btn-primary" data-target="#new-user-modal" data-toggle="modal">New User Modal</button>
+
+<button class="btn btn-primary" data-target="#task-modal" data-toggle="modal">Delete Modal</button>
+
+
+<div class="modal fade" id="new-user-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="#" method="post" id="new-user-form" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h2>NEW USER</h2>
+                    <button class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4  order-sm-1 order-md-12">
+                            <div class="form-group text-center">
+                                <div class="img-fake">
+                                    <i class="fa fa-cube" aria-hidden="true"></i>
+                                    <img class="img-fluid js-img-choosed" src="../img/face.jpg" alt="product image">
+                                </div>
+                                <label for="img-chooser">
+                                    <span class="btn btn-file">Choose Image</span>
+                                </label>
+                                <input type="file" name="img" id="img-chooser" class="d-none">
+                            </div>
+                        </div>
+                        <div class="col-md-8 order-sm-12 order-md-1">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" tabindex="0" id="username"
+                                               name="username" autofocus>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group c-dropdown">
+                                        <label for="user-role">User Role</label>
+
+                                        <input type="text" readonly class="form-control" id="user-role"
+                                               name="user_role">
+                                        <ul class="c-dropdown-menu">
+                                            <li><a href="#">Admin</a></li>
+                                            <li><a href="#">Author</a></li>
+                                            <li><a href="#">Reader</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone-number">Phone Number</label>
+                                        <input type="text" class="form-control" id="phone-number"
+                                               name="phone_number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="mobile">Mobile</label>
+                                        <input type="text" class="form-control" id="mobile" name="mobile">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text" class="form-control" id="address" name="address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="note">Note</label>
+                                        <input type="text" class="form-control" id="note" name="note">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-save js-btn-save">SAVE <i class="fa fa-spinner" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-close" data-dismiss="modal">CLOSE</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="message-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <a href="#" data-dismiss="modal" class="close">&times;</a>
+                <div class="success">
+                    <figure>
+                        <svg version="1.1" id="check-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 434.107 434.107" style="enable-background:new 0 0 434.107 434.107;" xml:space="preserve">
+<polygon points="412.895,67.303 155.815,324.378 21.213,189.777 0,210.99 155.815,366.804 434.107,88.516 "/>
+</svg>
+                        <svg id="circle-svg">
+                            <circle cx="60" cy="60" r="45"/>
+                        </svg>
+                    </figure>
+                </div>
+                <div class="success-message">
+                    <h3>SUCCESS!</h3>
+                    <p>Mail sent succesfully
+                        to ansarabbasgondal@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--customer modal-->
+
+<!--!customer modal-->
+<div class="modal fade" id="task-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">NEW TASK</h5>
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+            </div>
+            <div class="modal-body">
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="added-by">Added By</label>
+                                <input type="text" class="form-control" id="added-by"
+                                       name="added-by">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="type">Type</label>
+                                <input type="text" class="form-control" id="type" name="type">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="task">Task</label>
+                                <input type="text" class="form-control" id="task" name="task">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-save">SAVE</button>
+                <button class="btn btn-close" data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--!customer modal-->
+
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/dashboard.js"></script>
+
+</body>
+</html>

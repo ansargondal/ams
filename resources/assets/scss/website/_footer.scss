@@ -1,0 +1,109 @@
+.footer {
+  background: rgb(49, 49, 49);
+  padding: 50px 0 20px 0;
+  .footer-bottom {
+    @media (max-width: 758px) {
+      text-align: center;
+    }
+  }
+
+  ul.footer-links {
+    padding-left: 0;
+    li:first-of-type {
+      color: rgba(255, 255, 255, .7);
+    }
+    li {
+      a {
+        color: rgba(255, 255, 255, .5);
+        line-height: 2;
+        font-family: Raleway, sans-serif;
+      }
+    }
+  }
+
+  .subscription-container {
+    p {
+      color: rgba(255, 255, 255, .3);
+      position: relative;
+      @media (max-width: 768px) {
+        padding: 0 15px;
+      }
+      &:before {
+        content: '\f10d';
+        font-family: FontAwesome;
+        font-size: 1.4em;
+        color: #fff;
+        position: absolute;
+        top: -10px;
+        left: -23px;
+        color: #ffaf27;
+
+        @media (max-width: 768px) {
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+
+    .form-control, .btn {
+      background: transparent;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      border-radius: 0px;
+      border: 1px solid $primary_color;
+      color: rgba(255, 255, 255, .5);
+
+      &:focus {
+        border: 1px solid #fff;
+      }
+    }
+    .btn {
+      color: #ffffff;
+      background: $primary_color;
+      &:hover {
+        border: 1px solid #fff;
+      }
+    }
+  }
+
+  /*footer bottom*/
+  hr {
+    position: relative;
+    background: rgba(255, 255, 255, .2);
+  }
+  .list-inline a {
+    color: rgba(255, 255, 255, .3);
+  }
+  .credits {
+    color: rgba(255, 255, 255, .3);
+    float: right;
+    @media (max-width: 758px) {
+      float: none;
+      text-align: center;
+    }
+    span {
+      color: $secondary_color;
+    }
+  }
+  .back-to-top {
+    position: fixed;
+    display: none;
+    right: 3%;
+    bottom: 3%;
+    border: 1px solid $primary-color;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px 0px $primary_color;
+    a {
+      position: absolute;
+      top: 0;
+      left: 20%;
+      font-size: 1.2em;
+      color: $primary_color;
+    }
+  }
+  .show {
+    display: block;
+  }
+}
